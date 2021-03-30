@@ -1,16 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Generator</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   <title>Document</title>
 </head>
 <body>
-    
-    <!-- Tableau à crée-->
+   <!-- Junmbotron + Titre  + Description-->
+   <div class="container">
+       <div class="jumbotron">
+           <div class="container m-auto">
+             <h1 class="display-4">Bienvenu sur le générateur Aléatoire</h1>
+             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, ratione!.</p>
+           </div>
+         </div>
+ <div class="row">
+     <!-- Click Bouton tirage au sort + Equipe 3 jours + Equipe 2 jours -->
+   <div class="input-group mb-3">
+           <div class="input-group-prepend">
+               <button class="btn btn-outline-secondary" type="button" id="button-addon1">Tirage au sort aléatoire </button>
+           </div>
+               <input type="text" class="form-control" placeholder="écrire un nombre aléatoire" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          
+  
+           </div class="row my-custon-row justify-content-center align-items-center">
+                <div class="col 6 p-3 border bg-light text-success"> <p> Equipe 3 jours</p></div>           
+           <div class="col 6">
+               <div class="p-3 border bg-light"> <p>Equipes 2 jours</p> </div>
+           </div>
+                  
+   </div>
+         
+       <table class="table">
+        
+           <tbody>
+             <tr>              
+               <td>Luca & Sidney</td>
+               <td>Lundi</td>
+               <td> ...</td>
+             </tr>
+             <tr>               
+               <td>Yohan</td>
+               <td>Mercredi</td>
+               <td>...</td>
+             </tr>
+             <tr>               
+               <td>Lorenzo</td>
+               <td>Jeudi</td>
+               <td>...</td>
+             </tr>
+           </tbody>
+         </table>
+         
+   </div>
 
 </body>
-<script src="file.js"></script>
 </html>
