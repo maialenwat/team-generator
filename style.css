@@ -1,0 +1,13 @@
+/*modification titre "Bienvenu sur le générateur Aléatoire */
+h1.display-4 {
+    text-align: center;
+    }
+    .jumbotron {
+       margin: 3rem;
+    }
+    
+    /* Modification description */
+    .lead {
+       text-align: center;
+    }
+    
