@@ -1,13 +1,18 @@
+/*Changer la coleurdu body*/
+
+body{
+    background-image: linear-gradient(45deg, #dc4587, #ff3941);
+ }
+ .jumbotron {
+    margin: 3rem;
+ }
 /*modification titre "Bienvenu sur le générateur Aléatoire */
 h1.display-4 {
-    text-align: center;
-    }
-    .jumbotron {
-       margin: 3rem;
-    }
-    
-    /* Modification description */
-    .lead {
-       text-align: center;
-    }
+   text-align: center;
+   }
+   
+   /* Modification description */
+   .lead {
+      text-align: center;
+   }
     
