@@ -3,9 +3,11 @@ var students = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
 "Nourredine", "Marylise", "Raphaël", "Alexandre", "Tamara", "Maïalen", "Lucas",
 "Sidney", "Vincent"];
 
+var group1 = [];
+
 //je crée une variable qui récupère un élève aléatoire dans le tableau "students"
-var student = students[Math.floor(Math.random() * students.length)];
-console.log(student);
+/*var student = students[Math.floor(Math.random() * students.length)];
+console.log(student);*/
 
 //je veux placer 7 élèves dans un groupe et 8 dans l'autre
 for (let i=0; i<7; i++){
@@ -15,4 +17,11 @@ for (let i=0; i<7; i++){
 	//j'évite d'avoir un nom qui revient plusieurs fois dans le tableau
 	students.splice(result, 1);
 }
+
+
+//ce qu'il reste du tableau "students" est donc le "group2"
+var group2 = students;
+
 console.log(group1);
+console.log(group2);
+
