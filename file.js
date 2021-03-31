@@ -25,3 +25,6 @@ var group2 = students;
 console.log(group1);
 console.log(group2);
 
+//à présent il faut que je manipule le DOM pour ajouter un event listener sur le bouton cliquable générateur de groupe
+//il faut ensuite que j'affiche dans le tableau html les noms d'élèves récupérés par l'algo
+
