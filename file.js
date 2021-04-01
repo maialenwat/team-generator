@@ -5,9 +5,6 @@ var students = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
 
 var group1 = [];
 
-//je crée une variable qui récupère un élève aléatoire dans le tableau "students"
-/*var student = students[Math.floor(Math.random() * students.length)];
-console.log(student);*/
 
 //je veux placer 7 élèves dans un groupe et 8 dans l'autre
 for (let i=0; i<7; i++){
@@ -18,18 +15,23 @@ for (let i=0; i<7; i++){
 	students.splice(result, 1);
 }
 
-
 //ce qu'il reste du tableau "students" est donc le "group2"
 var group2 = students;
 
 console.log(group1);
 console.log(group2);
 
-//à présent il faut que je manipule le DOM pour ajouter un event listener sur le bouton cliquable générateur de groupe
-//il faut ensuite que j'affiche dans le tableau html les noms d'élèves récupérés par l'algo
+
+//TO DO LIST :
+//en manipulant le DOM animer le bouton cliquable
+//afficher dans un tableau les noms d'élèves générés par l'algo
 
 //je récupère mon bouton
-document.getElementById("button-addon1");
+var btn = document.getElementById("button-addon1");
+
+btn.addEventListener("click", function(){
+	
+})
 
 //je récupère mon tableau
 
