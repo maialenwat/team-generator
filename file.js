@@ -29,7 +29,7 @@ console.log(group2);
 //je récupère mon bouton
 var btn = document.getElementById("button-addon1");
 
-btn.addEventListener("click", function(){
+btn.addEventListener("click", ()=>{
 	
 })
 
