@@ -12,3 +12,27 @@ Pour le côté responsive : nous utiliserons le framework Bootstrap, car il nous
 - Enfin, on terminera par le côté esthétique avec un fichier CSS
 
 Pour la gestion de travail : nous travaillerons avec un outil de gestion de version de sources (Gitlab)
+
+
+
+
+
+----------------------------------------------
+
+COTE GRAPHIQUE: 
+- L'interface graphique est simple et effice. 
+- Les couleurs sont bien choisies car pas trop nuancées.
+- Dans la page, il appararait un texte qui na pas modifié et donc celui ci doit etre modifié ou effacé.
+
+
+
+COTE TECHNIQUE:
+- Lorsque je clique sur le bouton: "Tirage aléatoire", a premier clic il forme bien 2 groupes, puis ensuite, les tirages suivants ne forment plus 2 groupes. il faudrait un bouton qui permet de réinitialiser.
+- C'est dommage qu'on ne puisse pas voir la liste des stagiaires (et eventuellement en rajouter)
+
+- Je trouve bien d'avoir proposé une séparation en 2 groupes selon les contraintes de chacun (disponibilité journalière)
+- le HTML a ete fait tout en <div> 
+
+
+Je trouve que ce générateur de groupes est clair a comprendre. IL y a juste des mofifications a faire au niveau du bouton et du texte.
+
