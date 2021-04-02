@@ -54,12 +54,13 @@ function refreshPage(){
 	document.location.reload();
 }
 
+//fonction pour modifier le texte d'instruction lorsqu'on clique dessus
 function changeText(){
 	var x = document.getElementById("manual");
-	if (x.innerHTML === "Click to read the fucking manual"){
-		x.innerHTML = "Appui une fois sur le bouton 'tirage aléatoire' et rafraîchi !";
+	if (x.innerHTML === " Click to read the fucking manual"){
+		x.innerHTML = " Appui une fois sur le bouton 'tirage aléatoire' et rafraîchi !";
 	}else{
-		x.innerHTML = "Click to read the fucking manual";
+		x.innerHTML = " Over and out !";
 	}
 }
 
