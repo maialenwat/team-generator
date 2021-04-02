@@ -8,6 +8,8 @@ var temp = students;
 
 var group1 = [];
 
+/*je pointe la balise <button> dans le document html via son id, j'y ajoute un event pour qu'à chaque clique l'algorithme 
+  qui génère 2 groupes aléatoires s'enclenche*/
 document.getElementById("button-addon1").addEventListener("click", ()=>{
 
 	//je pointe mes balises <ul> via leur id
@@ -30,7 +32,8 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 	//ce qu'il reste du tableau "temp" est donc le "group2"
 	var group2 = temp;
 
-
+	/* j'itère dans mon groupe 1, à chaque élève je crée une balise <li> dans laquel j'insère son nom,
+	et je relie l'élément à la balise <ul> déjà présente dans le document html*/
 	for (let i = 0; i < group1.length; i++){
 		var element = document.createElement("li");
 		element.innerText = group1[i];
