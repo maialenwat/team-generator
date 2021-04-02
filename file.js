@@ -8,8 +8,8 @@ var temp = students;
 
 var group1 = [];
 
-/*je pointe la balise <button> dans le document html via son id, j'y ajoute un event pour qu'à chaque clique l'algorithme 
-  qui génère 2 groupes aléatoires s'enclenche*/
+/*je pointe la balise <button> dans le document html via son id, j'y ajoute un event pour qu'à chaque
+clique l'algorithme qui génère 2 groupes aléatoires s'enclenche*/
 document.getElementById("button-addon1").addEventListener("click", ()=>{
 
 	//je pointe mes balises <ul> via leur id
@@ -17,8 +17,8 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 	var zone2 = document.getElementById("g2");
 
 	//je réinitialise le tableau à chaque nouveau click
-	zone1.innerHTML = '';
-	zone2.innerHTML = '';
+	/*zone1.innerHTML = '';
+	zone2.innerHTML = '';*/
 
 	//je veux placer 7 élèves dans un groupe et 8 dans l'autre
 	for (let i=0; i<7; i++){
@@ -48,6 +48,11 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 	}
 
 });
+
+//je réinitialise la page avec la méthode location.reload()
+function refreshPage(){
+	window.location.reload();
+}
 
 
 
