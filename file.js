@@ -51,8 +51,8 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 
 //je réinitialise la page avec la méthode location.reload()
 function refreshPage(){
-	window.location.reload();
-}
+	document.location.reload();
+
 
 
 
