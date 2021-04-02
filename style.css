@@ -16,6 +16,8 @@ h1.display-4 {
    }
    button#refresh {
     background-color: goldenrod;
+    border-radius: 4px;
+    margin-left: 10px;
 }
    
    
