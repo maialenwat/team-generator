@@ -4,7 +4,7 @@ var students = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
 "Sidney", "Vincent"];
 
 //j'initialise une variable temporaire qui stocke tous les élèves
-var temp = students;
+var temp = getStudents();
 
 var group1 = [];
 
@@ -32,7 +32,7 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 	//ce qu'il reste du tableau "temp" est donc le "group2"
 	var group2 = temp;
 
-	/* j'itère dans mon groupe 1, à chaque élève je crée une balise <li> dans laquel j'insère son nom,
+	/* j'itère dans mon groupe 1, à chaque élève je crée une balise <li> dans laquelle j'insère son nom,
 	et je relie l'élément à la balise <ul> déjà présente dans le document html*/
 	for (let i = 0; i < group1.length; i++){
 		var element = document.createElement("li");
@@ -64,7 +64,9 @@ function changeText(){
 	}
 }
 
-
+function getStudents(){
+	return students;
+}
 
 
 
