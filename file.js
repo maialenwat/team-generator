@@ -64,11 +64,38 @@ function changeText(){
 	}
 }
 
-function getStudents(){
+//1. je crée une fonction getStudents avec retour, je remplace dans mon code partout où il y a écris students
+/*function getStudents(){
 	return students;
+}*/
+
+//2. je transforme la fonction en callback je set un timeout de 1 seconde
+function getStudents(callback){
+	setTimeout(() => {callback(students)}, 1000); // ligne optionnelle
+	callback(students);
 }
 
+/*
+	var temp;
+	getStudents(function(s){ 	s vaut students
+		temp = s;   			donc temp vaut students
+	})
+*/
 
+/*
+function generate(students){
+	//code de generation
+	return "groups";
+}
 
+function updateView(gs){
+	//code de maj de la vue
+	console.log("updateView")
+}
 
+getStudents(function(stu){
+	updateView(generate(stu))
+})
 
+console.log("main program")
+*/
