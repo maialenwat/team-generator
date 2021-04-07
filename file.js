@@ -1,12 +1,23 @@
-//j'initialise une variable avec les noms de tous les élèves
-var students = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
-"Nourredine", "Marylise", "Raphaël", "Alexandre", "Tamara", "Maïalen", "Lucas",
-"Sidney", "Vincent"];
+let temp;
 
-//j'initialise une variable temporaire qui stocke tous les élèves
-var temp = getStudents();
+getStudents((students)=>{
+	temp = students;
+	console.log(temp);
+});
+console.log(temp);
 
-var group1 = [];
+//						fonction callback en bas
+//                              | 	|	|
+//                              V   V	V
+
+//2. je transforme la fonction en callback je set un timeout de 1 seconde
+function getStudents(callback){
+	var studentsList = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
+	"Nourredine", "Marylise", "Raphaël", "Alexandre", "Tamara", "Maïalen", "Lucas",
+	"Sidney", "Vincent"];
+	setTimeout(() => {callback(studentsList)}, 2000);
+}
+
 
 /*je pointe la balise <button> dans le document html via son id, j'y ajoute un event pour qu'à chaque
 clique l'algorithme qui génère 2 groupes aléatoires s'enclenche*/
@@ -16,36 +27,42 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 	var zone1 = document.getElementById("g1");
 	var zone2 = document.getElementById("g2");
 
-	//je réinitialise le tableau à chaque nouveau click
-	/*zone1.innerHTML = '';
-	zone2.innerHTML = '';*/
+	/*zone1.innerHTML = ''
+	zone2.innerHTML = ''
+	document.getElementById("g1").innerHTML = "";*/
 
-	//je veux placer 7 élèves dans un groupe et 8 dans l'autre
-	for (let i=0; i<7; i++){
-		var result = Math.floor(Math.random() * temp.length);
-		//je pousse dans "group1" le nom d'un élève obtenu aléatoirement dans le tableau "students"
-		group1.push(temp[result]);
-		//j'évite d'avoir un nom qui revient plusieurs fois dans le tableau
-		temp.splice(result, 1);
-	}
+	var group1 = [];
 
-	//ce qu'il reste du tableau "temp" est donc le "group2"
-	var group2 = temp;
+	getStudents((stud)=>{		//stud = temp = studentsList
+		//je veux placer 7 élèves dans un groupe et 8 dans l'autre
+		for (let i=0; i<7; i++){
+			var result = Math.floor(Math.random() * stud.length);
+			//je pousse dans "group1" le nom d'un élève obtenu aléatoirement dans le tableau "students"
+			group1.push(stud[result]);
+			//j'évite d'avoir un nom qui revient plusieurs fois dans le tableau
+			stud.splice(result, 1);
+		}
 
-	/* j'itère dans mon groupe 1, à chaque élève je crée une balise <li> dans laquelle j'insère son nom,
-	et je relie l'élément à la balise <ul> déjà présente dans le document html*/
-	for (let i = 0; i < group1.length; i++){
-		var element = document.createElement("li");
-		element.innerText = group1[i];
-		zone1.appendChild(element);
-	}
-	
+		//ce qu'il reste du tableau "temp" est donc le "group2"
+		var group2 = stud;
 
-	for (let j = 0; j < group2.length; j++){
-		var element = document.createElement("li");
-		element.innerText = group2[j];
-		zone2.appendChild(element);
-	}
+		zone1.innerHTML = ''
+		/* j'itère dans mon groupe 1, à chaque élève je crée une balise <li> dans laquelle j'insère son nom,
+		et je relie l'élément à la balise <ul> déjà présente dans le document html*/
+		for (let i = 0; i < group1.length; i++){
+			var element = document.createElement("li");
+			element.innerText = group1[i];
+			zone1.appendChild(element);
+		}
+		
+		
+		zone2.innerHTML = ''
+		for (let j = 0; j < group2.length; j++){
+			var element = document.createElement("li");
+			element.innerText = group2[j];
+			zone2.appendChild(element);
+		}
+	});
 
 });
 
@@ -64,23 +81,12 @@ function changeText(){
 	}
 }
 
+
 //1. je crée une fonction getStudents avec retour, je remplace dans mon code partout où il y a écris students
 /*function getStudents(){
 	return students;
 }*/
 
-//2. je transforme la fonction en callback je set un timeout de 1 seconde
-function getStudents(callback){
-	setTimeout(() => {callback(students)}, 1000); // ligne optionnelle
-	callback(students);
-}
-
-/*
-	var temp;
-	getStudents(function(s){ 	s vaut students
-		temp = s;   			donc temp vaut students
-	})
-*/
 
 /*
 function generate(students){
