@@ -6,8 +6,6 @@ var students = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
 //j'initialise une variable temporaire qui stocke tous les élèves
 var temp = students;
 
-var group1 = [];
-
 /*je pointe la balise <button> dans le document html via son id, j'y ajoute un event pour qu'à chaque
 clique l'algorithme qui génère 2 groupes aléatoires s'enclenche*/
 document.getElementById("button-addon1").addEventListener("click", ()=>{
@@ -16,10 +14,9 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 	var zone1 = document.getElementById("g1");
 	var zone2 = document.getElementById("g2");
 
-	//je réinitialise le tableau à chaque nouveau click
-	/*zone1.innerHTML = '';
-	zone2.innerHTML = '';*/
 
+	var group1 = [];
+	
 	//je veux placer 7 élèves dans un groupe et 8 dans l'autre
 	for (let i=0; i<7; i++){
 		var result = Math.floor(Math.random() * temp.length);
