@@ -2,20 +2,17 @@ let temp;
 
 getStudents((students)=>{
 	temp = students;
-	console.log(temp);
+	//console.log(temp);
 });
-console.log(temp);
+//console.log(temp);
 
-//						fonction callback en bas
-//                              | 	|	|
-//                              V   V	V
 
 //2. je transforme la fonction en callback je set un timeout de 1 seconde
 function getStudents(callback){
 	var studentsList = ["Maxime", "Juan", "Yohan", "Laurène", "Valentin", "Fanny",
 	"Nourredine", "Marylise", "Raphaël", "Alexandre", "Tamara", "Maïalen", "Lucas",
 	"Sidney", "Vincent"];
-	setTimeout(() => {callback(studentsList)}, 2000);
+	setTimeout(() => {callback(studentsList)}, 1000);
 }
 
 
@@ -23,13 +20,9 @@ function getStudents(callback){
 clique l'algorithme qui génère 2 groupes aléatoires s'enclenche*/
 document.getElementById("button-addon1").addEventListener("click", ()=>{
 
-	//je pointe mes balises <ul> via leur id
+	//je pointe mes balises <ol> via leur id
 	var zone1 = document.getElementById("g1");
 	var zone2 = document.getElementById("g2");
-
-	/*zone1.innerHTML = ''
-	zone2.innerHTML = ''
-	document.getElementById("g1").innerHTML = "";*/
 
 	var group1 = [];
 
@@ -48,13 +41,12 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 
 		zone1.innerHTML = ''
 		/* j'itère dans mon groupe 1, à chaque élève je crée une balise <li> dans laquelle j'insère son nom,
-		et je relie l'élément à la balise <ul> déjà présente dans le document html*/
+		je relie ensuite l'élément 'li' à la balise <ol> déjà présente dans le document html*/
 		for (let i = 0; i < group1.length; i++){
 			var element = document.createElement("li");
 			element.innerText = group1[i];
 			zone1.appendChild(element);
 		}
-		
 		
 		zone2.innerHTML = ''
 		for (let j = 0; j < group2.length; j++){
@@ -73,35 +65,10 @@ function refreshPage(){
 
 //fonction pour modifier le texte d'instruction lorsqu'on clique dessus
 function changeText(){
-	var x = document.getElementById("manual");
-	if (x.innerHTML === " Click to read the fucking manual"){
-		x.innerHTML = " Appui une fois sur le bouton 'tirage aléatoire' et rafraîchi !";
+	var instruction = document.getElementById("manual");
+	if (instruction.innerHTML === " Click to read the fucking manual"){
+		instruction.innerHTML = " Appui une fois sur le bouton 'tirage aléatoire' et rafraîchi !";
 	}else{
-		x.innerHTML = " Over and out !";
+		instruction.innerHTML = " Over and out !";
 	}
 }
-
-
-//1. je crée une fonction getStudents avec retour, je remplace dans mon code partout où il y a écris students
-/*function getStudents(){
-	return students;
-}*/
-
-
-/*
-function generate(students){
-	//code de generation
-	return "groups";
-}
-
-function updateView(gs){
-	//code de maj de la vue
-	console.log("updateView")
-}
-
-getStudents(function(stu){
-	updateView(generate(stu))
-})
-
-console.log("main program")
-*/
