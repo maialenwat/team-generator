@@ -5,30 +5,30 @@ body{
    margin-bottom: 40px;
 
  }
+
 /*modification titre "Bienvenu sur le générateur Aléatoire */
 h1.display-4 {
    text-align: center;
-   }
+}
    
-   /* Modification description */
-   p.lead {
-      text-align: center;
-   }
-   button#refresh {
-    background-color: goldenrod;
-    border-radius: 4px;
-    margin-left: 10px;
+/* Modification description */
+p.lead {
+   text-align: center;
+}
+
+button#refresh {
+   background-color: goldenrod;
+   border-radius: 4px;
+   margin-left: 10px;
 }
    
    
-   
-   
-   /* type titre "We can do it" */
-   /* Google Fonts */
+/* type titre "We can do it" */
+/* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-/* Global */
 
+/* Global */
 .line-1{
     position: relative;
     top: 50%;  
@@ -44,14 +44,16 @@ h1.display-4 {
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
+   animation: typewriter 4s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
 }
+
 @keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
+   from{width: 0;}
+   to{width: 24em;}
 }
+
 @keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+   from{border-right-color: rgba(255,255,255,.75);}
+   to{border-right-color: transparent;}
 }
