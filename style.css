@@ -1,0 +1,59 @@
+/* background-image: linear-gradient(45deg, #dc4587, #ff3941); */
+body{
+   background-image: linear-gradient(45deg, #cce4fe, #cce4fe);
+   margin-top: 40px;
+   margin-bottom: 40px;
+
+ }
+
+/*modification titre "Bienvenu sur le générateur Aléatoire */
+h1.display-4 {
+   text-align: center;
+}
+   
+/* Modification description */
+p.lead {
+   text-align: center;
+}
+
+button#refresh {
+   background-color: goldenrod;
+   border-radius: 4px;
+   margin-left: 10px;
+}
+   
+   
+/* type titre "We can do it" */
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+/* Global */
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+   animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+   from{width: 0;}
+   to{width: 24em;}
+}
+
+@keyframes blinkTextCursor{
+   from{border-right-color: rgba(255,255,255,.75);}
+   to{border-right-color: transparent;}
+}
