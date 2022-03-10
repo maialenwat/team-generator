@@ -1,5 +1,9 @@
 # JR_MW_TEAMGEN
 
+<img src="./public/screenshot.png" alt="screenshot du projet">
+
+<br>
+
 Sujet : Création d'un site générateur de groupes aléatoires. Projet à réaliser en binôme.
 
 L'idée générale :
