@@ -1,10 +1,7 @@
-
 let temp;
 getStudents((students)=>{
 	temp = students;
-	//console.log(temp);
 });
-//console.log(temp);
 
 
 //2. je transforme la fonction en callback je set un timeout de 1 seconde
@@ -26,7 +23,7 @@ document.getElementById("button-addon1").addEventListener("click", ()=>{
 
 	var group1 = [];
 
-	getStudents((stud)=>{		//stud = temp = studentsList
+	getStudents((stud)=>{
 		//je veux placer 7 élèves dans un groupe et 8 dans l'autre
 		for (let i=0; i<7; i++){
 			var result = Math.floor(Math.random() * stud.length);
